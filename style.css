@@ -51,7 +51,7 @@
 }
 
 .container{
-  width: 90%;
+  max-width: 900px;
   margin: 0 auto;
 }
 
@@ -81,7 +81,9 @@ margin: 0 5px;
 }
 
 .logoText h1{
-  font-size: 2rem;
+  font-family: 'Yellowtail', cursive;
+  font-size: 2.3rem;
+
 }
 
 
