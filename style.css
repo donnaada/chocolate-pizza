@@ -257,3 +257,9 @@ hr.footerHr::after{
 	padding: 5px;
 	background: #fff;
 }
+
+footer p{
+  text-align: center;
+  color: rgb(104, 103, 103);
+
+}
