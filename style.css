@@ -1,3 +1,54 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html{
+    font-size: 16px;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;    
+}
+
+h1, h2, h3, h4, h5, h6{
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 3.1rem;
+}
+
+h2 {
+  font-size: 2.6rem;
+}
+h3 {
+  font-size: 2.2rem;
+}
+
+h4 {
+  font-size: 1.9rem;
+}
+
+h5 {
+  font-size: 1.7rem;
+}
+
+h6 {
+  font-size: 1.4rem;
+}
+
+p {
+  font-size: 1 rem;
+  margin-bottom: 0.5rem;
+}
+
+
 .m-0{
   margin: 0;
 }
@@ -55,6 +106,19 @@
   margin: 0 auto;
 }
 
+.font-nsw{font-family: 'Edu NSW ACT Foundation', cursive;}
+.font-noto{font-family: 'Noto Serif Lao', serif;}
+.font-oswald{font-family: 'Oswald', sans-serif;}
+.font-partickhand{font-family: 'Patrick Hand', cursive;}
+.font-robotocon{font-family: 'Roboto Condensed', sans-serif;}
+.font-yellowtail{font-family: 'Yellowtail', cursive;}
+
+.fw-300{
+  font-weight: 300;
+}
+
+
+
 nav{
   display: flex;
   flex-wrap: wrap;
@@ -71,19 +135,25 @@ nav{
 }
 
 .logo img{
-/* align-items: stretch; */
-margin: 0 5px;
+height: 50px;
+width: 50px;
+margin-right: 10px;
 }
+
+
 
 .logoText h1,
 .logoText p{
   margin: 0;
+  text-align: start;
 }
 
 .logoText h1{
   font-family: 'Yellowtail', cursive;
-  font-size: 2.3rem;
-
+  font-size: 2.75rem;
+}
+.logoText p{
+  font-size: .75rem;
 }
 
 
@@ -101,11 +171,28 @@ margin: 0 5px;
 .hrImg{
   height: 12px;
   margin-bottom: 30px;
+  border: none;
   background-image: url(./img/hr-img.png);
 }
 
 .blogHeading{
   margin-top: 30px;
+}
+
+.blogHeading h2{
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 700;
+}
+
+.blogHeading div p{
+  color: rgb(130, 130, 130);
+  font-size: .75rem;
+}
+
+.blogHeading button{
+  background-color: transparent;
+  border: none;
+  color: rgb(130, 130, 130)
 }
 
 .my-15{
@@ -114,19 +201,59 @@ margin: 0 5px;
 
 .ingredients{
   background-image: url('./img/list-bg.png');
+  background-repeat: no-repeat;
   padding: 2.2rem 5rem;
+  margin-bottom: 45px;
+}
+
+.blogBody p{
+  font-family: 'Noto Serif Lao', serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  color: rgb(91, 91, 91);
+  margin-bottom: 30px;
 }
 
 .ingredient-list div+div{
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
-.ingredient-list input[type=checkbox]{
-  /* accent-color: transparent; */
-  background-color: transparent;
+.ingredient-list label{
+  color: rgb(104, 103, 103);
+  font-family: 'Patrick Hand', cursive;
+  font-size: 1.5rem;
+}
+
+.ingredient-list input[type="checkbox"]{
+  accent-color: rgb(254,251,234);
+  background-color: rgb(254,251,234);
+  margin: 0;
+  width: 1.15em;
+  height: 1.15em;
+  border: 1em solid rgba(128, 128, 128, 0.7);
+  border-radius: 4px;
 }
 .ingredient-list input:checked+label{
   text-decoration: line-through;
 }
 
-/* end */
+.blogFooter{
+  display:  flex;
+  align-items: center;
+}
+
+hr.footerHr{
+	margin: 45px 0;
+	border-top: 1px solid rgba(153, 153, 153, 0.20);
+}
+
+hr.footerHr::after{
+	content: url(./img/small-logo.png);
+	left: 50%;
+	position: absolute;
+	transform: translateY(-50%) translateX(-50%);
+	/* Controls the whitespace around the symbol */
+	padding: 5px;
+	background: #fff;
+}
