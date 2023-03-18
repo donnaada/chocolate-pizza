@@ -126,3 +126,5 @@ margin: 0 5px;
 .ingredient-list input:checked+label{
   text-decoration: line-through;
 }
+
+/* end */
